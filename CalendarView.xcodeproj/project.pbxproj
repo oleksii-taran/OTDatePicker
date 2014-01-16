@@ -21,6 +21,7 @@
 		4980288218887CC200BF3BB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980286418887CC200BF3BB8 /* UIKit.framework */; };
 		4980288A18887CC200BF3BB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4980288818887CC200BF3BB8 /* InfoPlist.strings */; };
 		4980288C18887CC200BF3BB8 /* CalendarViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980288B18887CC200BF3BB8 /* CalendarViewTests.m */; };
+		4980289F188883A700BF3BB8 /* OTCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4980289E188883A700BF3BB8 /* OTCalendarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		4980288718887CC200BF3BB8 /* CalendarViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalendarViewTests-Info.plist"; sourceTree = "<group>"; };
 		4980288918887CC200BF3BB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4980288B18887CC200BF3BB8 /* CalendarViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewTests.m; sourceTree = "<group>"; };
+		4980289D188883A700BF3BB8 /* OTCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTCalendarView.h; sourceTree = "<group>"; };
+		4980289E188883A700BF3BB8 /* OTCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTCalendarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				4980287018887CC200BF3BB8 /* OTAppDelegate.m */,
 				4980287518887CC200BF3BB8 /* OTViewController.h */,
 				4980287618887CC200BF3BB8 /* OTViewController.m */,
+				4980289D188883A700BF3BB8 /* OTCalendarView.h */,
+				4980289E188883A700BF3BB8 /* OTCalendarView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				4980286D18887CC200BF3BB8 /* main.m in Sources */,
 				4980287118887CC200BF3BB8 /* OTAppDelegate.m in Sources */,
 				4980287718887CC200BF3BB8 /* OTViewController.m in Sources */,
+				4980289F188883A700BF3BB8 /* OTCalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

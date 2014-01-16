@@ -112,26 +112,10 @@
 		4980286618887CC200BF3BB8 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
-				4980286F18887CC200BF3BB8 /* OTAppDelegate.h */,
-				4980287018887CC200BF3BB8 /* OTAppDelegate.m */,
-				4980287218887CC200BF3BB8 /* Main.storyboard */,
-				4980287518887CC200BF3BB8 /* OTViewController.h */,
-				4980287618887CC200BF3BB8 /* OTViewController.m */,
-				4980287818887CC200BF3BB8 /* Images.xcassets */,
-				4980286718887CC200BF3BB8 /* Supporting Files */,
+				498028951888807100BF3BB8 /* Sources */,
+				498028961888808A00BF3BB8 /* Resources */,
 			);
 			path = CalendarView;
-			sourceTree = "<group>";
-		};
-		4980286718887CC200BF3BB8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4980286818887CC200BF3BB8 /* CalendarView-Info.plist */,
-				4980286918887CC200BF3BB8 /* InfoPlist.strings */,
-				4980286C18887CC200BF3BB8 /* main.m */,
-				4980286E18887CC200BF3BB8 /* CalendarView-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4980288518887CC200BF3BB8 /* CalendarViewTests */ = {
@@ -150,6 +134,54 @@
 				4980288818887CC200BF3BB8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		498028951888807100BF3BB8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				498028971888813B00BF3BB8 /* Classes */,
+				4980286C18887CC200BF3BB8 /* main.m */,
+				4980286E18887CC200BF3BB8 /* CalendarView-Prefix.pch */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		498028961888808A00BF3BB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				498028981888821100BF3BB8 /* Nibs */,
+				498028991888825500BF3BB8 /* Images */,
+				4980286818887CC200BF3BB8 /* CalendarView-Info.plist */,
+				4980286918887CC200BF3BB8 /* InfoPlist.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		498028971888813B00BF3BB8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4980286F18887CC200BF3BB8 /* OTAppDelegate.h */,
+				4980287018887CC200BF3BB8 /* OTAppDelegate.m */,
+				4980287518887CC200BF3BB8 /* OTViewController.h */,
+				4980287618887CC200BF3BB8 /* OTViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		498028981888821100BF3BB8 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				4980287218887CC200BF3BB8 /* Main.storyboard */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		498028991888825500BF3BB8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4980287818887CC200BF3BB8 /* Images.xcassets */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +493,7 @@
 				4980289118887CC200BF3BB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4980289218887CC200BF3BB8 /* Build configuration list for PBXNativeTarget "CalendarViewTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +502,7 @@
 				4980289418887CC200BF3BB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

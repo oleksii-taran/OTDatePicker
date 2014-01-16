@@ -418,8 +418,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CalendarView/CalendarView-Prefix.pch";
-				INFOPLIST_FILE = "CalendarView/CalendarView-Info.plist";
+				GCC_PREFIX_HEADER = "CalendarView/Sources/CalendarView-Prefix.pch";
+				INFOPLIST_FILE = "CalendarView/Resources/CalendarView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -431,8 +431,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CalendarView/CalendarView-Prefix.pch";
-				INFOPLIST_FILE = "CalendarView/CalendarView-Info.plist";
+				GCC_PREFIX_HEADER = "CalendarView/Sources/CalendarView-Prefix.pch";
+				INFOPLIST_FILE = "CalendarView/Resources/CalendarView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

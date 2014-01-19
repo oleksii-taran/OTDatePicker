@@ -8,12 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-/// OTCalendarView public interface
-@interface OTDatePicker : UIControl <NSCoding>
+
+@interface OTDatePicker : UIControl
+
+@property (nonatomic, copy) NSCalendar *calendar;
+@property (nonatomic, strong) NSLocale *locale;
+@property (nonatomic, strong) NSTimeZone *timeZone;
+
+@property (nonatomic, strong) NSDate *date;
+
+- (void)setDate:(NSDate *)date animated:(BOOL)animated;
 
 @end
 
-/// OTCalendarView protected interface
+
 @interface OTDatePicker ()
 
 @end

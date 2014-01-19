@@ -8,12 +8,18 @@
 
 #import "OTDatePicker.h"
 
-/// OTCalendarView private interface
+
 @interface OTDatePicker ()
 
 @end
 
-/// OTCalendarView implementation
+
 @implementation OTDatePicker
+
+- (void)setDate:(NSDate *)date animated:(BOOL)animated
+{
+	// TODO: implement animation
+	self.date = date;
+}
 
 @end

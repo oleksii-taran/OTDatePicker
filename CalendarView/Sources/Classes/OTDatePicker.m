@@ -77,7 +77,7 @@
 	NSDateComponents *components = [self.effectiveCalendar components:units fromDate:self.date];
 	NSInteger const year = components.year;
 	NSInteger const month = components.month;
-	self.contentView.yearTextField.text = [NSString stringWithFormat:@"%li", year];
+	self.contentView.yearTextField.text = [NSString stringWithFormat:@"%li", (long)year];
 	self.contentView.monthTextField.text = self.dateFormatter.standaloneMonthSymbols[month - 1];
 	
 	[self.contentView.daysCollectionView reloadData];
@@ -120,7 +120,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	OTDatePickerDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Day cell" forIndexPath:indexPath];
-	cell.dayLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row + 1];
+	cell.dayLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)indexPath.row + 1];
 	
 	NSDateComponents *components = [self.effectiveCalendar components:NSCalendarUnitDay fromDate:self.date];
 	if (components.day == indexPath.row + 1) {

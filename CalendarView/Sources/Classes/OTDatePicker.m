@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) __OTDatePicker *contentView;
 
+@property (nonatomic, strong, readonly) NSDateFormatter *dateFormatter;
+
 @end
 
 
@@ -23,7 +25,10 @@
 {
 	self = [super initWithFrame:frame];
 	if (self) {
+		self.date = [NSDate date];
+		
 		[self loadContentView];
+		[self updateUI];
 	}
 	return self;
 }
@@ -32,7 +37,10 @@
 {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
+		self.date = [NSDate date];
+		
 		[self loadContentView];
+		[self updateUI];
 	}
 	return self;
 }
@@ -52,6 +60,42 @@
 	contentView.frame = self.bounds;
 	[self addSubview:contentView];
 	self.contentView = contentView;
+}
+
+- (void)updateUI
+{
+	NSCalendarUnit units = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+	NSDateComponents *components = [self.effectiveCalendar components:units fromDate:self.date];
+	NSInteger const year = components.year;
+	NSInteger const month = components.month;
+	self.contentView.yearTextField.text = [NSString stringWithFormat:@"%li", year];
+	self.contentView.monthTextField.text = self.dateFormatter.standaloneMonthSymbols[month - 1];
+}
+
+- (NSCalendar *)effectiveCalendar
+{
+	return (self.calendar) ? : [NSCalendar currentCalendar];
+}
+
+- (NSLocale *)effectiveLocale
+{
+	return (self.locale) ? : ((self.calendar.locale) ? : [NSLocale currentLocale]);
+}
+
+- (NSTimeZone *)effectiveTimeZone
+{
+	return (self.timeZone) ? : ((self.calendar.timeZone) ? : [NSTimeZone defaultTimeZone]);
+}
+
+#pragma mark -
+
+- (NSDateFormatter *)dateFormatter
+{
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	dateFormatter.calendar = self.effectiveCalendar;
+	dateFormatter.locale = self.effectiveLocale;
+	dateFormatter.timeZone = self.effectiveTimeZone;
+	return dateFormatter;
 }
 
 #pragma mark - IBActions

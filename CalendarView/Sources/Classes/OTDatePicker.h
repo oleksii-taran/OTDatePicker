@@ -24,6 +24,10 @@
 
 @interface OTDatePicker ()
 
+@property (nonatomic, copy, readonly) NSCalendar *effectiveCalendar;
+@property (nonatomic, strong, readonly) NSLocale *effectiveLocale;
+@property (nonatomic, strong, readonly) NSTimeZone *effectiveTimeZone;
+
 - (IBAction)selectNextMonth:(id)sender;
 - (IBAction)selectPreviousMonth:(id)sender;
 

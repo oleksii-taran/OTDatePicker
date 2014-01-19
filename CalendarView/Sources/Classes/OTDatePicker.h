@@ -1,5 +1,5 @@
 //
-//  OTCalendarView.h
+//  OTDatePicker.h
 //  CalendarView
 //
 //  Created by Oleksii Taran on 1/16/14.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 /// OTCalendarView public interface
-@interface OTCalendarView : UIControl <NSCoding>
+@interface OTDatePicker : UIControl <NSCoding>
 
 @end
 
 /// OTCalendarView protected interface
-@interface OTCalendarView ()
+@interface OTDatePicker ()
 
 @end

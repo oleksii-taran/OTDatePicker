@@ -31,15 +31,21 @@
                         <action selector="selectNextMonth:" destination="-2" eventType="touchUpInside" id="u5V-3O-yeW"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRp-oR-Qrb">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRp-oR-Qrb">
                     <rect key="frame" x="203" y="58" width="97" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="BP0-VN-yIm"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqw-s5-pWy">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqw-s5-pWy">
                     <rect key="frame" x="203" y="96" width="97" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="VHZ-wC-ssu"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -47,11 +53,15 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="zhG-A6-RaT" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="20" id="2YB-xp-CYH"/>
+                <constraint firstItem="yqw-s5-pWy" firstAttribute="top" secondItem="wRp-oR-Qrb" secondAttribute="bottom" constant="8" id="9r5-Je-gr8"/>
+                <constraint firstAttribute="trailing" secondItem="wRp-oR-Qrb" secondAttribute="trailing" constant="20" id="Dqf-Yz-aM6"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="width" secondItem="zhG-A6-RaT" secondAttribute="width" priority="600" id="Pla-gq-tbf"/>
                 <constraint firstItem="zhG-A6-RaT" firstAttribute="leading" secondItem="DDI-kG-28j" secondAttribute="trailing" constant="8" symbolic="YES" id="TCu-uD-TLE"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="20" id="U5p-gd-Gx4"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="leading" secondItem="gLq-Ow-2oc" secondAttribute="leading" constant="20" id="WO5-NJ-Suf"/>
                 <constraint firstAttribute="trailing" secondItem="zhG-A6-RaT" secondAttribute="trailing" constant="20" id="euB-Cu-0H1"/>
+                <constraint firstAttribute="trailing" secondItem="yqw-s5-pWy" secondAttribute="trailing" constant="20" id="gJk-9g-F7V"/>
+                <constraint firstItem="wRp-oR-Qrb" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="58" id="jhf-UQ-d1d"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>

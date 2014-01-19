@@ -67,15 +67,15 @@
                 <constraint firstItem="zhG-A6-RaT" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="20" id="2YB-xp-CYH"/>
                 <constraint firstItem="yqw-s5-pWy" firstAttribute="top" secondItem="wRp-oR-Qrb" secondAttribute="bottom" constant="8" id="9r5-Je-gr8"/>
                 <constraint firstAttribute="trailing" secondItem="wRp-oR-Qrb" secondAttribute="trailing" constant="20" id="Dqf-Yz-aM6"/>
+                <constraint firstItem="eV4-0u-W5e" firstAttribute="top" secondItem="DDI-kG-28j" secondAttribute="bottom" constant="8" id="K93-ta-2SS"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="width" secondItem="zhG-A6-RaT" secondAttribute="width" priority="600" id="Pla-gq-tbf"/>
                 <constraint firstItem="zhG-A6-RaT" firstAttribute="leading" secondItem="DDI-kG-28j" secondAttribute="trailing" constant="8" symbolic="YES" id="TCu-uD-TLE"/>
                 <constraint firstItem="wRp-oR-Qrb" firstAttribute="leading" secondItem="eV4-0u-W5e" secondAttribute="trailing" constant="8" id="TLw-qp-Mn6"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="20" id="U5p-gd-Gx4"/>
+                <constraint firstItem="wRp-oR-Qrb" firstAttribute="top" secondItem="zhG-A6-RaT" secondAttribute="bottom" constant="8" id="UWp-SV-Xwj"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="leading" secondItem="gLq-Ow-2oc" secondAttribute="leading" constant="20" id="WO5-NJ-Suf"/>
-                <constraint firstItem="eV4-0u-W5e" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="58" id="d5C-Aa-gFu"/>
                 <constraint firstAttribute="trailing" secondItem="zhG-A6-RaT" secondAttribute="trailing" constant="20" id="euB-Cu-0H1"/>
                 <constraint firstAttribute="trailing" secondItem="yqw-s5-pWy" secondAttribute="trailing" constant="20" id="gJk-9g-F7V"/>
-                <constraint firstItem="wRp-oR-Qrb" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="58" id="jhf-UQ-d1d"/>
                 <constraint firstItem="eV4-0u-W5e" firstAttribute="leading" secondItem="gLq-Ow-2oc" secondAttribute="leading" constant="20" id="p8s-5F-0wb"/>
                 <constraint firstAttribute="bottom" secondItem="eV4-0u-W5e" secondAttribute="bottom" constant="20" id="skI-4f-QJh"/>
             </constraints>

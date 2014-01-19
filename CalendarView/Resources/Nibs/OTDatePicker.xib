@@ -49,6 +49,18 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eV4-0u-W5e">
+                    <rect key="frame" x="20" y="58" width="175" height="490"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6E0-dn-s5K">
+                        <size key="itemSize" width="20" height="20"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -57,14 +69,19 @@
                 <constraint firstAttribute="trailing" secondItem="wRp-oR-Qrb" secondAttribute="trailing" constant="20" id="Dqf-Yz-aM6"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="width" secondItem="zhG-A6-RaT" secondAttribute="width" priority="600" id="Pla-gq-tbf"/>
                 <constraint firstItem="zhG-A6-RaT" firstAttribute="leading" secondItem="DDI-kG-28j" secondAttribute="trailing" constant="8" symbolic="YES" id="TCu-uD-TLE"/>
+                <constraint firstItem="wRp-oR-Qrb" firstAttribute="leading" secondItem="eV4-0u-W5e" secondAttribute="trailing" constant="8" id="TLw-qp-Mn6"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="20" id="U5p-gd-Gx4"/>
                 <constraint firstItem="DDI-kG-28j" firstAttribute="leading" secondItem="gLq-Ow-2oc" secondAttribute="leading" constant="20" id="WO5-NJ-Suf"/>
+                <constraint firstItem="eV4-0u-W5e" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="58" id="d5C-Aa-gFu"/>
                 <constraint firstAttribute="trailing" secondItem="zhG-A6-RaT" secondAttribute="trailing" constant="20" id="euB-Cu-0H1"/>
                 <constraint firstAttribute="trailing" secondItem="yqw-s5-pWy" secondAttribute="trailing" constant="20" id="gJk-9g-F7V"/>
                 <constraint firstItem="wRp-oR-Qrb" firstAttribute="top" secondItem="gLq-Ow-2oc" secondAttribute="top" constant="58" id="jhf-UQ-d1d"/>
+                <constraint firstItem="eV4-0u-W5e" firstAttribute="leading" secondItem="gLq-Ow-2oc" secondAttribute="leading" constant="20" id="p8s-5F-0wb"/>
+                <constraint firstAttribute="bottom" secondItem="eV4-0u-W5e" secondAttribute="bottom" constant="20" id="skI-4f-QJh"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
+                <outlet property="daysCollectionView" destination="eV4-0u-W5e" id="Zs6-Bf-13I"/>
                 <outlet property="monthTextField" destination="wRp-oR-Qrb" id="bGQ-g2-Xhg"/>
                 <outlet property="yearTextField" destination="yqw-s5-pWy" id="9Gi-jI-6Lb"/>
             </connections>

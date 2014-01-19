@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49076EA1188C24A700C9765A /* __OTDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 49076EA0188C24A700C9765A /* __OTDatePicker.m */; };
 		49076EA3188C267000C9765A /* OTDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49076EA2188C267000C9765A /* OTDatePicker.xib */; };
+		49076EA5188C4AA000C9765A /* OTDatePickerDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49076EA4188C4AA000C9765A /* OTDatePickerDayCell.xib */; };
+		49076EA8188C4C9700C9765A /* OTDatePickerDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49076EA7188C4C9700C9765A /* OTDatePickerDayCell.m */; };
 		4980286118887CC200BF3BB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980286018887CC200BF3BB8 /* Foundation.framework */; };
 		4980286318887CC200BF3BB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980286218887CC200BF3BB8 /* CoreGraphics.framework */; };
 		4980286518887CC200BF3BB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980286418887CC200BF3BB8 /* UIKit.framework */; };
@@ -40,6 +42,9 @@
 		49076E9F188C24A700C9765A /* __OTDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __OTDatePicker.h; sourceTree = "<group>"; };
 		49076EA0188C24A700C9765A /* __OTDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __OTDatePicker.m; sourceTree = "<group>"; };
 		49076EA2188C267000C9765A /* OTDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTDatePicker.xib; sourceTree = "<group>"; };
+		49076EA4188C4AA000C9765A /* OTDatePickerDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTDatePickerDayCell.xib; sourceTree = "<group>"; };
+		49076EA6188C4C9700C9765A /* OTDatePickerDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDatePickerDayCell.h; sourceTree = "<group>"; };
+		49076EA7188C4C9700C9765A /* OTDatePickerDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDatePickerDayCell.m; sourceTree = "<group>"; };
 		4980285D18887CC200BF3BB8 /* CalendarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4980286018887CC200BF3BB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4980286218887CC200BF3BB8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +179,8 @@
 				4980287618887CC200BF3BB8 /* OTViewController.m */,
 				4980289D188883A700BF3BB8 /* OTDatePicker.h */,
 				4980289E188883A700BF3BB8 /* OTDatePicker.m */,
+				49076EA6188C4C9700C9765A /* OTDatePickerDayCell.h */,
+				49076EA7188C4C9700C9765A /* OTDatePickerDayCell.m */,
 				49076E9F188C24A700C9765A /* __OTDatePicker.h */,
 				49076EA0188C24A700C9765A /* __OTDatePicker.m */,
 			);
@@ -185,6 +192,7 @@
 			children = (
 				4980287218887CC200BF3BB8 /* Main.storyboard */,
 				49076EA2188C267000C9765A /* OTDatePicker.xib */,
+				49076EA4188C4AA000C9765A /* OTDatePickerDayCell.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 			files = (
 				49076EA3188C267000C9765A /* OTDatePicker.xib in Resources */,
 				4980287918887CC200BF3BB8 /* Images.xcassets in Resources */,
+				49076EA5188C4AA000C9765A /* OTDatePickerDayCell.xib in Resources */,
 				4980286B18887CC200BF3BB8 /* InfoPlist.strings in Resources */,
 				4980287418887CC200BF3BB8 /* Main.storyboard in Resources */,
 			);
@@ -299,6 +308,7 @@
 				49076EA1188C24A700C9765A /* __OTDatePicker.m in Sources */,
 				4980286D18887CC200BF3BB8 /* main.m in Sources */,
 				4980287118887CC200BF3BB8 /* OTAppDelegate.m in Sources */,
+				49076EA8188C4C9700C9765A /* OTDatePickerDayCell.m in Sources */,
 				4980287718887CC200BF3BB8 /* OTViewController.m in Sources */,
 				4980289F188883A700BF3BB8 /* OTDatePicker.m in Sources */,
 			);

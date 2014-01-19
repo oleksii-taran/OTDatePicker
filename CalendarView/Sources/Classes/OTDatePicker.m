@@ -8,9 +8,13 @@
 
 #import "OTDatePicker.h"
 #import "__OTDatePicker.h"
+#import "OTDatePickerDayCell.h"
 
 
-@interface OTDatePicker ()
+@interface OTDatePicker () <
+	UICollectionViewDataSource,
+	UICollectionViewDelegate
+>
 
 @property (nonatomic, strong) __OTDatePicker *contentView;
 
@@ -58,6 +62,11 @@
 	NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"OTDatePicker" owner:nil options:nil];
 	__OTDatePicker *contentView = [objects lastObject];
 	contentView.frame = self.bounds;
+	
+	contentView.daysCollectionView.dataSource = self;
+	contentView.daysCollectionView.delegate = self;
+	[contentView.daysCollectionView registerNib:[UINib nibWithNibName:@"OTDatePickerDayCell" bundle:nil] forCellWithReuseIdentifier:@"Day cell"];
+	
 	[self addSubview:contentView];
 	self.contentView = contentView;
 }
@@ -70,6 +79,8 @@
 	NSInteger const month = components.month;
 	self.contentView.yearTextField.text = [NSString stringWithFormat:@"%li", year];
 	self.contentView.monthTextField.text = self.dateFormatter.standaloneMonthSymbols[month - 1];
+	
+	[self.contentView.daysCollectionView reloadData];
 }
 
 - (NSCalendar *)effectiveCalendar
@@ -96,6 +107,37 @@
 	dateFormatter.locale = self.effectiveLocale;
 	dateFormatter.timeZone = self.effectiveTimeZone;
 	return dateFormatter;
+}
+
+#pragma mark - UICollectionViewDataSource methods
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+	NSRange range = [self.effectiveCalendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self.date];
+	return range.length;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	OTDatePickerDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Day cell" forIndexPath:indexPath];
+	cell.dayLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row + 1];
+	
+	NSDateComponents *components = [self.effectiveCalendar components:NSCalendarUnitDay fromDate:self.date];
+	if (components.day == indexPath.row + 1) {
+		cell.dayLabel.backgroundColor = [UIColor redColor];
+	}
+	
+	return cell;
+}
+
+#pragma mark - UICollectionViewDelegate methods
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSDateComponents *components = [self.effectiveCalendar components:NSCalendarUnitDay fromDate:self.date];
+	components.day = indexPath.row + 1 - components.day;
+	self.date = [self.effectiveCalendar dateByAddingComponents:components toDate:self.date options:0];
+	[self updateUI];
 }
 
 #pragma mark - IBActions

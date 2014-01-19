@@ -54,4 +54,16 @@
 	self.contentView = contentView;
 }
 
+#pragma mark - IBActions
+
+- (void)selectNextMonth:(id)sender
+{
+	
+}
+
+- (void)selectPreviousMonth:(id)sender
+{
+	
+}
+
 @end

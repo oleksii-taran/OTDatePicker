@@ -17,6 +17,9 @@
                     <state key="normal" title="Previous Month">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="selectPreviousMonth:" destination="-2" eventType="touchUpInside" id="TQs-Uw-zL5"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-A6-RaT">
                     <rect key="frame" x="164" y="20" width="136" height="30"/>
@@ -24,7 +27,22 @@
                     <state key="normal" title="Next Month">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="selectNextMonth:" destination="-2" eventType="touchUpInside" id="u5V-3O-yeW"/>
+                    </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRp-oR-Qrb">
+                    <rect key="frame" x="203" y="58" width="97" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqw-s5-pWy">
+                    <rect key="frame" x="203" y="96" width="97" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -36,6 +54,10 @@
                 <constraint firstAttribute="trailing" secondItem="zhG-A6-RaT" secondAttribute="trailing" constant="20" id="euB-Cu-0H1"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="monthTextField" destination="wRp-oR-Qrb" id="bGQ-g2-Xhg"/>
+                <outlet property="yearTextField" destination="yqw-s5-pWy" id="9Gi-jI-6Lb"/>
+            </connections>
         </view>
     </objects>
 </document>

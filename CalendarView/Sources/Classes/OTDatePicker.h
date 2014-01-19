@@ -24,4 +24,7 @@
 
 @interface OTDatePicker ()
 
+- (IBAction)selectNextMonth:(id)sender;
+- (IBAction)selectPreviousMonth:(id)sender;
+
 @end

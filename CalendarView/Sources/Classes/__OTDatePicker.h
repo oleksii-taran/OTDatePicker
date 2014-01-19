@@ -11,4 +11,7 @@
 
 @interface __OTDatePicker : UIView
 
+@property (nonatomic, weak) IBOutlet UITextField *yearTextField;
+@property (nonatomic, weak) IBOutlet UITextField *monthTextField;
+
 @end

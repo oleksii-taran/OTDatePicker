@@ -102,12 +102,18 @@
 
 - (void)selectNextMonth:(id)sender
 {
-	
+	NSDateComponents *components = [[NSDateComponents alloc] init];
+	components.month = 1;
+	self.date = [self.effectiveCalendar dateByAddingComponents:components toDate:self.date options:0];
+	[self updateUI];
 }
 
 - (void)selectPreviousMonth:(id)sender
 {
-	
+	NSDateComponents *components = [[NSDateComponents alloc] init];
+	components.month = -1;
+	self.date = [self.effectiveCalendar dateByAddingComponents:components toDate:self.date options:0];
+	[self updateUI];
 }
 
 @end
